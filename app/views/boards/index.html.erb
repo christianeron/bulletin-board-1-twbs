@@ -1,11 +1,9 @@
 <div class="container">
   <div class="row">
     <div class="offset-md-3 col-md-6">
-    <div class="card">
+      <div class="card">
         <div class="card-header d-flex align-items-center">
           <h1 class="h6">All boards</h1>
-          
-          
           <!-- Button trigger modal -->
           <button type="button" class="btn btn-outline-success btn-sm ms-auto" data-bs-toggle="modal" data-bs-target="#newBoardModal">
             Add a new board
@@ -16,11 +14,12 @@
           <% @list_of_boards.each do |a_board| %>
           <a href="/boards/<%= a_board.id %>" class="d-flex list-group-item list-group-item-action">
           <%= a_board.name %>
+          <div class="ms-auto">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
           <% end %>
           </a>
         </div>
-          
-        </ul>
       </div>
     </div>
   </div>
@@ -45,7 +44,7 @@
           </div>
 
           <div class="d-grid">
-            <button type="button" class="btn btn-success">Add board</button>
+            <button class="btn btn-success">Add board</button>
           </div>
         </form>
       </div>
